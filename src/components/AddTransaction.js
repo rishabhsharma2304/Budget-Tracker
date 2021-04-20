@@ -6,17 +6,16 @@ const [text, setText] = useState('');
 const [amount, setAmount] = useState('0');
 
 const {addTransaction} = useContext(GlobalContext);
-var i = 5;
 
 const onSubmit = e => {
     e.preventDefault();
     
 
     const newTransaction = {
-        id: i,
+        id: Math.floor(Math.random() * 100000000),
         text, amount: +amount
+        
     }
-    i=i+1;
     addTransaction(newTransaction);
 }
 
