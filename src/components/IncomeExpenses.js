@@ -1,17 +1,17 @@
 import React, {useContext} from 'react';
-import {GlobalContext, GlobalProvider} from '../Context/GlobalContext';
+import {GlobalContext} from '../Context/GlobalContext';
 
 export const IncomeExpenses = () => {
     const {transactions} = useContext(GlobalContext);
     const amount = transactions.map(transactions => transactions.amount);
 
-    const income = amount.
-    filter(item => item>0)
+    const income = amount
+    .filter(item => item>0)
     .reduce((acc,item) => (acc+=item),0)
     .toFixed(2);
 
-    const expense = amount.
-    filter(item => item<0)
+    const expense = amount
+    .filter(item => item<0)
     .reduce((acc,item) => (acc+=item),0)*-1
     .toFixed(2);
 
