@@ -21,7 +21,7 @@ const onSubmit = e => {
 
     return (
         <>
-            <h3>Add Transaction</h3>
+            <h3>Add any transaction</h3>
             <form onSubmit={onSubmit}>
                 <div className="form-control">
                     <label htmlFor="text">Text</label>
